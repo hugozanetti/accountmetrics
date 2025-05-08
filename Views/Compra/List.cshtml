@@ -1,0 +1,29 @@
+
+@model IEnumerable<accountmetrics.Models.Compra>
+
+<div>
+    <h2>Todas as Compras</h2>
+    <br>
+</div>
+
+@* @foreach(var user in Model)
+{
+    <div>
+        <h4>@user.Name</h4>
+        <h3>Idade : @user.UserIdade.ToString()</h3>
+        <br>
+    </div>
+} *@
+
+<div class="container">
+    <div class="row">
+        @foreach(var compra in Model)
+        {
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h4>@compra.CodigoNF</h4>
+                <p>Data : @compra.DataCompra.ToString()</p>
+            </div>
+        }
+    </div>
+</div>
+
